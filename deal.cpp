@@ -1,10 +1,12 @@
 #include "deal.h"
 
+int deal::count = 0;
 deal::deal(car Cr, client Cl, manager Mn, service Sv) {
 	Car = Cr;
 	Client = Cl;
 	Manager = Mn;
 	Service = Sv;
+	count++;
 }
 deal::deal(car Cr) {
 	Car = Cr;
@@ -14,6 +16,7 @@ deal::deal(car Cr) {
 	Manager = m;
 	Client = c;
 	Service = s;
+	count++;
 }
 deal::deal() {
 	car cr;
@@ -24,6 +27,7 @@ deal::deal() {
 	Manager = m;
 	Client = c;
 	Service = s;
+	count++;
 }
 void deal::input() {
 	Car.input();
@@ -42,6 +46,6 @@ int deal::sum_costs() {
 	sum = Car.cost + Service.cost;
 	return sum;
 }
-int deal::get_number() {
-	return number;
+int deal::get_count() {
+	return count;
 }
