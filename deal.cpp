@@ -42,3 +42,6 @@ int deal::sum_costs() {
 	sum = Car.cost + Service.cost;
 	return sum;
 }
+int deal::get_number() {
+	return number;
+}

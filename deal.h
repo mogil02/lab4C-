@@ -7,6 +7,7 @@
 
 class deal {
 private:
+    static int number;
     car Car;
     client Client;
     manager Manager;
@@ -18,4 +19,7 @@ public:
     void input();
     void output();
     int sum_costs();
+    static int get_number();
 };
+
+int deal::number = 0;
