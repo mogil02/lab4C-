@@ -29,6 +29,9 @@ deal::deal() {
 	Service = s;
 	count++;
 }
+deal::~deal() {
+	count--;
+}
 void deal::input() {
 	Car.input();
 	Manager.input();

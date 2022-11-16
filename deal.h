@@ -16,6 +16,7 @@ public:
     deal(car Cr, client Cl, manager Mn, service Sv);
     deal(car Cr);
     deal();
+    ~deal();
     void input();
     void output();
     int sum_costs();
