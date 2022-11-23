@@ -12,4 +12,5 @@ public:
     service();
     void input();
     void output();
+    service& operator++(int);
 };

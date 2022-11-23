@@ -30,7 +30,6 @@ deal::deal() {
 	count++;
 }
 deal::~deal() {
-	count--;
 }
 void deal::input() {
 	Car.input();
@@ -49,6 +48,31 @@ int deal::sum_costs() {
 	sum = Car.cost + Service.cost;
 	return sum;
 }
+car& deal::get_car() {
+	return this->Car;
+}
+client& deal::get_client() {
+	return this->Client;
+}
+manager& deal::get_manager() {
+	return this->Manager;
+}
+service& deal::get_service() {
+	return this->Service;
+}
 int deal::get_count() {
 	return count;
+}
+deal deal::operator++(int) {
+	this->Car++;
+	this->Service++;
+	return *this;
+}
+deal deal::operator+(const deal& d) {
+	this->Car.cost += d.Car.cost;
+	this->Service.cost += d.Service.cost;
+	return *this;
+}
+int* deal::get_carcost() {
+	return &this->Car.cost;
 }

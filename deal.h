@@ -21,4 +21,11 @@ public:
     void output();
     int sum_costs();
     static int get_count();
+    car& get_car();
+    client& get_client();
+    service& get_service();
+    manager& get_manager();
+    deal operator++(int);
+    deal operator+(const deal& d);
+    int* get_carcost();
 };

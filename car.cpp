@@ -30,3 +30,12 @@ void car::output() {
 	cout << "—тоимость авто: " << this->cost << endl;
 	Spec.output();
 }
+car& car::operator++(int) {
+	this->cost += 10000;
+	return *this;
+}
+void car::sravn_cost(car& C) {
+	if (this->cost > C.cost) cout << "÷ена на первый автомобиль выше чем на второй." << endl;
+	else if (this->cost < C.cost) cout << "÷ена на второй автомобиль выше чем на первый." << endl;
+	else cout << "÷ена на первый и на второй автомобили равны." << endl;
+}

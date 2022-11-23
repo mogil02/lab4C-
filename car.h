@@ -2,6 +2,8 @@
 #include "lib.h"
 #include "specifications.h"
 
+using namespace std;
+
 class car
 {
     friend class deal;
@@ -15,4 +17,6 @@ public:
     car();
     void input();
     void output();
+    car& operator++(int);
+    void sravn_cost(car& C);
 };

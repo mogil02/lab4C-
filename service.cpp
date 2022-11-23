@@ -23,3 +23,7 @@ void service::output() {
 	cout << "Название доп. услуги: " << name << endl;
 	cout << "Стоимость доп. услуги: " << cost << endl;
 }
+service& service::operator++(int) {
+	this->cost += 1000;
+	return *this;
+}
