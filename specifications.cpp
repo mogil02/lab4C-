@@ -25,12 +25,20 @@ string specifications::trans_name(int id) {
 	else return variator;
 }
 void specifications::input() {
+	int id;
 	cout << "Введите мощность двигателя: ";
 	cin >> engine_power;
 	cout << "Введите максимальную скорость: ";
 	cin >> max_speed;
 	cout << "Введите номер трансмиссии\n1) - Механика\n2) - Гидромеханика\n3) - Робот\n4) - Вариатор\nВвод: ";
-	cin >> transmission_id;
+	cin >> id;
+	try {
+		if (id > 4 || id < 1) throw id;
+		transmission_id = id;
+	}
+	catch (const int) {
+		cout << "Ошибка ввода! Введено значение по умолчанию: \"1\"." << endl;
+	}
 	cout << "Введите объём двигателя: ";
 	cin >> volume;
 }

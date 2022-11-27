@@ -1,5 +1,4 @@
 #pragma once
-#include "lib.h"
 #include "specifications.h"
 
 using namespace std;
