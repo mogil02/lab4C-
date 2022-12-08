@@ -41,6 +41,7 @@ void specifications::input() {
 	}
 	cout << "Введите объём двигателя: ";
 	cin >> volume;
+	while (getchar() != '\n');
 }
 void specifications::output() {
 	cout << "Введите мощность двигателя: " << engine_power << endl;
