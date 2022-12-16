@@ -1,16 +1,17 @@
 #pragma once
 #include "lib.h"
+#include "human.h"
 
-class client
+class client : public human
 {
 	friend class deal;
-private:
+protected:
 	int ID;
 	string FIO;
 public:
 	client(int id, string name);
 	client(int id);
 	client();
-	void input();
-	void output();
+	virtual void input();
+	virtual void output();
 };

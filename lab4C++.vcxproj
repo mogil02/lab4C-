@@ -130,6 +130,7 @@
     <ClCompile Include="car.cpp" />
     <ClCompile Include="client.cpp" />
     <ClCompile Include="deal.cpp" />
+    <ClCompile Include="derClient.cpp" />
     <ClCompile Include="lab4C++.cpp" />
     <ClCompile Include="manager.cpp" />
     <ClCompile Include="service.cpp" />
@@ -139,10 +140,13 @@
     <ClInclude Include="car.h" />
     <ClInclude Include="client.h" />
     <ClInclude Include="deal.h" />
+    <ClInclude Include="derClient.h" />
+    <ClInclude Include="human.h" />
     <ClInclude Include="lib.h" />
     <ClInclude Include="manager.h" />
     <ClInclude Include="service.h" />
     <ClInclude Include="specifications.h" />
+    <ClInclude Include="TacmplateClass.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

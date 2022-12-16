@@ -1,10 +1,11 @@
 #pragma once
 #include "lib.h"
+#include "human.h"
 
-class manager
+class manager : public human
 {
 	friend class deal;
-private:
+protected:
 	int ID;
 	int wages;
 	string FIO;

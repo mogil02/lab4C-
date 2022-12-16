@@ -1,28 +1,34 @@
 ﻿#include "deal.h"
+#include "derClient.h"
 #include "windows.h"
 
 int main()
 {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
-    specifications spec;
-    spec.input(); //Обработка ввода номера трансмиссии.
+    client* cl = new client;
+    dercl* dcl = new dercl;
+    TempClass<int> age; //Использование шаблона.
+    TempClass<char> gender;
+    cout << "Введите возраст: ";
+    dcl->set_age(age.set());
+    cout << "Введите пол: ";
+    dcl->set_gender(gender.set());
+    cout << "\nИспользование производного класса от класса client. Вывод объектов с помощью виртуальной функции" << endl << "client: ";
+    cl->output();
+    cout << endl << "dercl: ";
+    cl = dcl;
+    cl->output();
+    cout << endl;
 
-    deal deals[3], spdeals[2][3]; //Работа с массивом объектов.
-    cout << "\nИнициализация одномерного массива сделок:" << endl;
-    for (int i = 0; i < 3; i++)
-        deals[i].input();
-
-    cout << "\nВывод одномерного массива сделок:" << endl;
-    for (int i = 0; i < 3; i++)
-        deals[i].output();
-
-    cout << "\nКопирование одномерного массива во вторую ячейку двумерного массива (например, список таблиц сделок): " << endl;
-    for (int i = 0; i < 3; i++)
-        spdeals[1][i] = deals[i];
-    cout << "\nВывод двумерного массива : " << endl;
-    for (int i = 0; i < 2; i++)
-        for (int j = 0; j < 3; j++)
-            spdeals[i][j].output();
+    cout << "\nИспользование аюстрактного класса для вывода классов client и manager:" << endl << "client: ";
+    manager* m = new manager;
+    human* h;
+    client* c = new client;
+    h = c;
+    h->output();
+    cout << "\nmanager: ";
+    h = m;
+    h->output();
     return 0;
 }
