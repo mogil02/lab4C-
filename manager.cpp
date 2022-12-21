@@ -29,3 +29,6 @@ void manager::output() {
 	cout << "ФИО менеджера: " << FIO << endl;
 	cout << "Премия менеджера за сделку: " << wages << endl;
 }
+string manager::get_name() {
+	return this->FIO;
+}

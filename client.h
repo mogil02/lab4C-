@@ -14,4 +14,5 @@ public:
 	client();
 	virtual void input();
 	virtual void output();
+	string get_name();
 };

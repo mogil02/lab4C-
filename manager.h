@@ -15,4 +15,5 @@ public:
 	manager();
 	void input();
 	void output();
+	string get_name();
 };

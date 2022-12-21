@@ -23,3 +23,7 @@ void client::input() {
 void client::output() {
 	cout << "ФИО клиента: " << FIO << endl;
 }
+
+string client::get_name() {
+	return this->FIO;
+}
